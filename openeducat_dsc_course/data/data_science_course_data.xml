@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Data Science Course -->
+        <record id="dsc_course_channel" model="slide.channel">
+            <field name="name">Mastering Data Science</field>
+            <field name="description" type="html">
+                <p>Learn the fundamentals of Data Science, including Python, Pandas, Machine Learning, and Visualization.</p>
+            </field>
+            <field name="website_published" eval="True"/>
+            <field name="channel_type">training</field>
+            <field name="allow_comment" eval="True"/>
+        </record>
+
+        <!-- Course Content: PDF Lesson -->
+        <record id="dsc_slide_pdf" model="slide.slide">
+            <field name="name">Introduction to Data Science (PDF)</field>
+            <field name="channel_id" ref="dsc_course_channel"/>
+            <field name="sequence">1</field>
+            <field name="slide_type">document</field>
+            <field name="datas" type="base64">VGhpcyBpcyBhIHBsYWNlaG9sZGVyIFBERiBmaWxlIGZvciB0aGUgTWFzdGVyaW5nIERhdGEgU2NpZW5jZSBjb3Vyc2UuCg==</field>
+            <field name="is_published" eval="True"/>
+            <field name="completion_time">0.05</field>
+        </record>
+
+        <!-- Course Content: Video Lesson -->
+        <record id="dsc_slide_video" model="slide.slide">
+            <field name="name">Data Science in 5 Minutes (Video)</field>
+            <field name="channel_id" ref="dsc_course_channel"/>
+            <field name="sequence">2</field>
+            <field name="slide_type">video</field>
+            <field name="video_source_type">youtube</field>
+            <field name="youtube_video_id">N6BghzuLgaw</field>
+            <field name="is_published" eval="True"/>
+            <field name="completion_time">0.05</field>
+        </record>
+
+        <!-- Course Content: Image/Infographic Lesson -->
+        <record id="dsc_slide_image" model="slide.slide">
+            <field name="name">Data Science Infographic</field>
+            <field name="channel_id" ref="dsc_course_channel"/>
+            <field name="sequence">3</field>
+            <field name="slide_type">infographic</field>
+            <field name="datas" type="base64">VGhpcyBpcyBhIHBsYWNlaG9sZGVyIFBORyBmaWxlIGZvciB0aGUgTWFzdGVyaW5nIERhdGEgU2NpZW5jZSBjb3Vyc2UuCg==</field>
+            <field name="is_published" eval="True"/>
+            <field name="completion_time">0.02</field>
+        </record>
+
+        <!-- Course Content: Quiz -->
+        <record id="dsc_slide_quiz" model="slide.slide">
+            <field name="name">Data Science Quiz</field>
+            <field name="channel_id" ref="dsc_course_channel"/>
+            <field name="sequence">4</field>
+            <field name="slide_type">quiz</field>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Quiz Question 1 -->
+        <record id="dsc_quiz_q1" model="slide.question">
+            <field name="slide_id" ref="dsc_slide_quiz"/>
+            <field name="question">Which of the following is a key skill for a Data Scientist?</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <!-- Quiz Question 1 - Answers -->
+        <record id="dsc_quiz_q1_a1" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q1"/>
+            <field name="text_value">Python Programming</field>
+            <field name="is_correct" eval="True"/>
+            <field name="sequence">1</field>
+        </record>
+        <record id="dsc_quiz_q1_a2" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q1"/>
+            <field name="text_value">Graphic Design</field>
+            <field name="is_correct" eval="False"/>
+            <field name="sequence">2</field>
+        </record>
+        <record id="dsc_quiz_q1_a3" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q1"/>
+            <field name="text_value">Creative Writing</field>
+            <field name="is_correct" eval="False"/>
+            <field name="sequence">3</field>
+        </record>
+
+        <!-- Quiz Question 2 -->
+        <record id="dsc_quiz_q2" model="slide.question">
+            <field name="slide_id" ref="dsc_slide_quiz"/>
+            <field name="question">What is Pandas primarily used for in Data Science?</field>
+            <field name="sequence">2</field>
+        </record>
+
+        <!-- Quiz Question 2 - Answers -->
+        <record id="dsc_quiz_q2_a1" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q2"/>
+            <field name="text_value">Data manipulation and analysis</field>
+            <field name="is_correct" eval="True"/>
+            <field name="sequence">1</field>
+        </record>
+        <record id="dsc_quiz_q2_a2" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q2"/>
+            <field name="text_value">Creating 3D models</field>
+            <field name="is_correct" eval="False"/>
+            <field name="sequence">2</field>
+        </record>
+        <record id="dsc_quiz_q2_a3" model="slide.answer">
+            <field name="question_id" ref="dsc_quiz_q2"/>
+            <field name="text_value">Building web applications</field>
+            <field name="is_correct" eval="False"/>
+            <field name="sequence">3</field>
+        </record>
+
+    </data>
+</odoo>
