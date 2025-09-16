@@ -19,7 +19,7 @@
             <field name="channel_id" ref="dsc_course_channel"/>
             <field name="sequence">1</field>
             <field name="slide_type">document</field>
-            <field name="datas" type="base64" file="openeducat_dsc_course/static/files/data_science_intro.pdf"/>
+            <field name="binary_content" type="base64" file="openeducat_dsc_course/static/files/data_science_intro.pdf"/>
             <field name="is_published" eval="True"/>
             <field name="completion_time">0.05</field>
         </record>
@@ -42,7 +42,7 @@
             <field name="channel_id" ref="dsc_course_channel"/>
             <field name="sequence">3</field>
             <field name="slide_type">infographic</field>
-            <field name="datas" type="base64" file="openeducat_dsc_course/static/files/data_science_infographic.png"/>
+            <field name="binary_content" type="base64" file="openeducat_dsc_course/static/files/data_science_infographic.png"/>
             <field name="is_published" eval="True"/>
             <field name="completion_time">0.02</field>
         </record>
