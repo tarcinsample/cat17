@@ -3,13 +3,11 @@
     <data>
         <record id="group_op_parent" model="res.groups">
             <field name="name">Parent</field>
-            <field name="category_id" ref="openeducat_core.module_category_all_other_education"/>
             <field name="implied_ids" eval="[(4, ref('openeducat_core.group_op_back_office_admin'))]"/>
             <field name="users" eval="[(4, ref('base.user_admin'))]"/>
         </record>
         <record id="group_op_parent_admin" model="res.groups">
             <field name="name">Parent Admin</field>
-            <field name="category_id" ref="openeducat_core.module_category_all_other_education"/>
             <field name="implied_ids" eval="[(4, ref('openeducat_parent.group_op_parent'))]"/>
             <field name="users" eval="[(4, ref('base.user_admin'))]"/>
         </record>

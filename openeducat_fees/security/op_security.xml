@@ -16,7 +16,6 @@
 
         <record id="group_openeducat_fees_user" model="res.groups">
             <field name="name">User</field>
-            <field name="category_id" ref="module_category_openeducat_fees"/>
             <field name="users" eval="[(4, ref('base.user_admin'))]"/>
             <field name="implied_ids"
                    eval="[(4, ref('base.group_user')),(4, ref('openeducat_core.group_op_faculty'))]"/>
@@ -24,7 +23,6 @@
 
         <record id="group_op_fees_admin" model="res.groups">
             <field name="name">Manager</field>
-            <field name="category_id" ref="module_category_openeducat_fees"/>
             <field name="users" eval="[(4, ref('base.user_admin'))]"/>
             <field name="implied_ids"
                    eval="[(4, ref('group_openeducat_fees_user'))]"/>
@@ -32,7 +30,6 @@
 
         <record id="openeducat_core.group_op_back_office_admin" model="res.groups">
             <field name="name">Back Office Admin</field>
-            <field name="category_id" ref="openeducat_core.module_category_openeducat"/>
             <field name="users" eval="[(4, ref('base.user_admin'))]"/>
             <field name="implied_ids"
                    eval="[(4, ref('openeducat_fees.group_op_fees_admin')),(4, ref('base.group_system'))]"/>
